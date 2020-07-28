@@ -97,7 +97,7 @@ void hls_sobel(AXI_STREAM& INPUT_STREAM, AXI_STREAM& OUTPUT_STREAM, int rows, in
 ```C++
 #define DDR_BASEADDR       0x00000000
 #define DISPLAY_VDMA       XPAR_AXI_VDMA_0_BASEADDR + 0
-#define SOBEL_VDMA		   XPAR_AXI_VDMA_1_BASEADDR + 0
+#define SOBEL_VDMA         XPAR_AXI_VDMA_1_BASEADDR + 0
 ```
 
 在DDR中分配3段地址空间，分别存放HLS IP读写地址和显示内容的位置。
