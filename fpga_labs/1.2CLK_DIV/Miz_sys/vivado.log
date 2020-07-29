@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jul 22 21:45:10 2020
+# Process ID: 7360
+# Current directory: C:/Users/XY/Desktop/verilog-myjob/CLK_DIV/Miz_sys
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8840 C:\Users\XY\Desktop\verilog-myjob\CLK_DIV\Miz_sys\Miz_sys.xpr
+# Log file: C:/Users/XY/Desktop/verilog-myjob/CLK_DIV/Miz_sys/vivado.log
+# Journal file: C:/Users/XY/Desktop/verilog-myjob/CLK_DIV/Miz_sys\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/XY/Desktop/verilog-myjob/CLK_DIV/Miz_sys/Miz_sys.xpr
+INFO: [Project 1-313] Project file moved from 'J:/update_board/MZ7100FA/01/CH07_CLK_DIV/Miz_sys' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:12 . Memory (MB): peak = 841.137 ; gain = 123.629
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 22 22:18:09 2020...

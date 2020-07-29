@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'max&lt;int>' to 'max_int_s'." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:39.258+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'reg&lt;int>' to 'reg_int_s'." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:39.149+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'min&lt;int>' to 'min_int_s'." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:39.127+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[5]' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:39.066+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[4]' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.973+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf[0].val[3]' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:400)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.930+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'core_buf.val[1].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:223)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.865+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'core_buf.val[0].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:223)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.818+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'core_buf.val[1].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:223)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.775+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'core_buf.val[0].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:223)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.755+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'k_buf.val[0].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:222)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.723+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'k_buf.val[5].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:222)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.696+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'k_buf.val[4].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:222)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.683+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'k_buf.val[3].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:222)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.671+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'k_buf.val[2].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:222)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.646+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'k_buf.val[1].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:222)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.600+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf.val[0].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:222)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.574+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf.val[5].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:222)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.555+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf.val[4].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:222)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.532+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf.val[3].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:222)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.520+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf.val[2].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:222)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.498+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'k_buf.val[1].V' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:222)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.484+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::AXIvideo2Mat&lt;32, 1080, 1920, 4096>' to 'AXIvideo2Mat' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_io.h:49:9)" projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:36.474+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::CvtColor&lt;HLS_BGR2GRAY, 4096, 0, 1080, 1920>' to 'CvtColor' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:409:39)" projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:35.990+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Dilate&lt;0, 0, 1080, 1920>' to 'Dilate' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_imgproc.h:118:33)" projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:35.968+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Duplicate&lt;1080, 1920, 4096, 4096>' to 'Duplicate' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_arithm.h:672:50)" projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:35.903+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::FAST_t_opr&lt;16, 7, 0, 1080, 1920>' to 'FAST_t_opr' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:28:5)" projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:35.873+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIvideo&lt;32, 1080, 1920, 4096>' to 'Mat2AXIvideo' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_io.h:78:50)" projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:35.854+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::PaintMask&lt;4096, 0, 1080, 1920>' to 'PaintMask' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_fast.h:472:43)" projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:35.825+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::max&lt;int>' to 'max&lt;int>' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls_math.h:249)" projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:35.809+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::min&lt;int>' to 'min&lt;int>' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls_math.h:255)" projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:35.794+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable '_src.data_stream.V' (fast_corner/src/Top.cpp:15)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:27.510+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'gray.data_stream.V' (fast_corner/src/Top.cpp:21)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:26.929+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'src1.data_stream.V' (fast_corner/src/Top.cpp:18)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:26.914+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'src0.data_stream.V' (fast_corner/src/Top.cpp:17)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:26.897+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'mask.data_stream.V' (fast_corner/src/Top.cpp:19)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:26.883+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable '_dst.data_stream.V' (fast_corner/src/Top.cpp:16)." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:26.870+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_axi_io.h:78: variable-indexed range selection may cause suboptimal QoR." projectName="fast_corner" solutionName="solution1" date="2020-07-28T15:48:25.814+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "Divider_Multiple_top_TB_time_synth.v"
+verilog xil_defaultlib  "../../../../Miz_sys.srcs/sim_1/new/Divider_Multiple_top_TB.v"
+
+# Do not sort compile order
+nosort

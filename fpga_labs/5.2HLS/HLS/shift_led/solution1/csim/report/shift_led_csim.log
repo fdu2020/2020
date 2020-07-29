@@ -1,0 +1,15 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../src/Test_shift_led.cpp in debug mode
+   Compiling ../../../src/top.cpp in debug mode
+   Generating csim.exe
+shift_out= 11111101
+shift_out= 11111011
+shift_out= 11110111
+shift_out= 11101111
+shift_out= 11011111
+shift_out= 10111111
+shift_out= 01111111
+shift_out= 11111110
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

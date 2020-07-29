@@ -1,0 +1,49 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'ImgProcess_Top'" level="0">
+<item name = "Date">Tue Jul 28 10:09:18 2020
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">skin_detect</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">aartix7</item>
+<item name = "Target device">xa7a12tcsg325-1q</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 11.000, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_hls_skin_dection_fu_622">hls_skin_dection, ?, ?, ?, ?, none</column>
+<column name="grp_AXIvideo2Mat_fu_640">AXIvideo2Mat, 3, 2080083, 3, 2080083, none</column>
+<column name="grp_Mat2AXIvideo_fu_663">Mat2AXIvideo, 1, 2076841, 1, 2076841, none</column>
+<column name="call_ret_Block_Mat_exit45_pro_fu_686">Block_Mat_exit45_pro, 0, 0, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jun  6 14:46:42 2018
+# Process ID: 10084
+# Current directory: F:/MZ7100/CODE/S01/S01_CH09_CLK_DIV/Divider_Multiple/Miz_sys.runs/synth_1
+# Command line: vivado.exe -log Divider_Multiple_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Divider_Multiple_top.tcl
+# Log file: F:/MZ7100/CODE/S01/S01_CH09_CLK_DIV/Divider_Multiple/Miz_sys.runs/synth_1/Divider_Multiple_top.vds
+# Journal file: F:/MZ7100/CODE/S01/S01_CH09_CLK_DIV/Divider_Multiple/Miz_sys.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Divider_Multiple_top.tcl -notrace

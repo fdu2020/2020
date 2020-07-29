@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/MIZ_SOC/SEASON_01/CH09_CLK_DIV/Miz_sys/Miz_sys.sim/sim_1/synth/timing/Divider_Multiple_top_TB_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Divider_Multiple_top
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/MIZ_SOC/SEASON_01/CH09_CLK_DIV/Miz_sys/Miz_sys.srcs/sim_1/new/Divider_Multiple_top_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Divider_Multiple_top_TB

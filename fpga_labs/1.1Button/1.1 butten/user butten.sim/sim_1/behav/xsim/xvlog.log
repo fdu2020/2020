@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/user project/user butten/user butten.srcs/sources_1/new/key.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module key
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/user project/user butten/user butten.srcs/sim_1/new/key_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module key_tb

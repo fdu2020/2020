@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source/>
+  <testbench>
+    <originFiles name="test.cpp" path="D:\PJ_for_HLS\video_test\video_test\src\test.cpp"/>
+    <originFiles name="test_1080p.bmp" path="D:\PJ_for_HLS\video_test\video_test\test_1080p.bmp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

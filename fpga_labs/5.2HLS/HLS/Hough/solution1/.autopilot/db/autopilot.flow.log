@@ -1,0 +1,936 @@
+INFO-FLOW: Workspace D:/PJ_for_HLS/Hough/solution1 opened at Tue Jul 28 17:02:50 +0800 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/dsp48e2.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 30300} {LUT 242400}    {FF 484800} {DSP48E 1920}   {BRAM 1200}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu.gen 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.142 sec.
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.222 sec.
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.227 sec.
+Command     ap_source done; 0.227 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu_fpv7 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu_hp.hlp 
+Execute     source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xcku115-flvd1517-2-e 
+Execute       add_library xilinx/kintexu/kintexu:xcku115:-flvd1517:-2-e 
+Execute         get_default_platform 
+Execute         license_isbetapart xcku115 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 82920} {LUT 663360}    {FF 1326720} {DSP48E 5520}  {BRAM 4320} {SLR 2}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/kintexu/kintexu_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xcku115-flvd1517-2-e'
+Execute       get_default_platform 
+Command     set_part done; 0.123 sec.
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 82920} {LUT 663360}    {FF 1326720} {DSP48E 5520}  {BRAM 4320} {SLR 2}  
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.468 sec.
+Execute   set_part xcku115-flvd1517-2-e -tool vivado 
+Execute     add_library xilinx/kintexu/kintexu:xcku115:-flvd1517:-2-e 
+Execute       get_default_platform 
+Execute       license_isbetapart xcku115 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 82920} {LUT 663360}    {FF 1326720} {DSP48E 5520}  {BRAM 4320} {SLR 2}  
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/kintexu/kintexu_fpv7 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     config_compile -blackbox  
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'Hough/src/top.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling Hough/src/top.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted Hough/src/top.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado_2018.3/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "Hough/src/top.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp" 
+INFO-FLOW: exec E:/Xilinx/Vivado_2018.3/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado_2018.3/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E Hough/src/top.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp
+Command       clang done; 2.068 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec E:/Xilinx/Vivado_2018.3/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.647 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado_2018.3/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp"  -o "D:/PJ_for_HLS/Hough/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec E:/Xilinx/Vivado_2018.3/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado_2018.3/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/useless.bc
+Command       clang done; 5.461 sec.
+INFO-FLOW: Done: GCC PP time: 9.2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp std=gnu++98 -directive=D:/PJ_for_HLS/Hough/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Xilinx/Vivado_2018.3/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/PJ_for_HLS/Hough/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.319 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp std=gnu++98 -directive=D:/PJ_for_HLS/Hough/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec E:/Xilinx/Vivado_2018.3/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/PJ_for_HLS/Hough/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.338 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vivado_2018.3/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/PJ_for_HLS/Hough/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cpp.diag.yml D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/PJ_for_HLS/Hough/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cpp.out.log 2> D:/PJ_for_HLS/Hough/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cpp.err.log 
+Command       ap_eval done; 1.474 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado_2018.3/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/PJ_for_HLS/Hough/solution1/.autopilot/db/tidy-3.1.top.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/PJ_for_HLS/Hough/solution1/.autopilot/db/tidy-3.1.top.pp.0.cpp.out.log 2> D:/PJ_for_HLS/Hough/solution1/.autopilot/db/tidy-3.1.top.pp.0.cpp.err.log 
+Command         ap_eval done; 1.662 sec.
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado_2018.3/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/PJ_for_HLS/Hough/solution1/.autopilot/db/xilinx-legacy-rewriter.top.pp.0.cpp.out.log 2> D:/PJ_for_HLS/Hough/solution1/.autopilot/db/xilinx-legacy-rewriter.top.pp.0.cpp.err.log 
+Command         ap_eval done; 1.593 sec.
+Command       tidy_31 done; 3.278 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 6.1 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec E:/Xilinx/Vivado_2018.3/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.823 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado_2018.3/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot" -I "E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.bc" 
+INFO-FLOW: exec E:/Xilinx/Vivado_2018.3/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado_2018.3/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot -I E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.bc
+Command       clang done; 5.876 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld D:/PJ_for_HLS/Hough/solution1/.autopilot/db/top.g.bc -hls-opt -except-internalize hls_hough -LE:/Xilinx/Vivado_2018.3/Vivado/2018.3/win64/lib -lhlsm -lhlsmc++ -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 4.883 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:32 . Memory (MB): peak = 105.305 ; gain = 19.109
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:32 . Memory (MB): peak = 105.305 ; gain = 19.109
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.pp.bc -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.pp.0.bc -f 
+Command         transform done; 1.181 sec.
+Execute         llvm-ld D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LE:/Xilinx/Vivado_2018.3/Vivado/2018.3/win64/lib -lfloatconversion -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 4.118 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top hls_hough -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.g.0.bc -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:701) in function 'hls::Mat<1080, 1920, 0>::write(hls::Scalar<1, unsigned char>)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:677) in function 'hls::Mat<1080, 1920, 0>::read()' completely with a factor of 1.
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 0>::init' into 'hls::Mat<1080, 1920, 0>::Mat.1' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:642).
+INFO: [XFORM 203-603] Inlining function 'hls::AXIGetBitFields<32, unsigned char>.1' into 'hls::AXIGetBitFields<32, unsigned char>' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_axi_io.h:71).
+INFO: [XFORM 203-603] Inlining function 'hls::AXIGetBitFields<32, unsigned char>' into 'hls::AXIvideo2Mat<32, 1080, 1920, 0>' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_io.h:92).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 0>::write' into 'hls::Mat<1080, 1920, 0>::operator<<' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:717).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 0>::operator<<' into 'hls::AXIvideo2Mat<32, 1080, 1920, 0>' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_io.h:94).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 0>::operator<<' into 'hls::hls_hough_line' (Hough/src/top.cpp:84).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 0>::read' into 'hls::Mat<1080, 1920, 0>::operator>>' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:711).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 0>::operator>>' into 'hls::Mat2AXIvideo<32, 1080, 1920, 0>' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_io.h:140).
+INFO: [XFORM 203-603] Inlining function 'hls::Mat<1080, 1920, 0>::operator>>' into 'hls::hls_hough_line' (Hough/src/top.cpp:36).
+INFO: [XFORM 203-603] Inlining function 'hls::AXISetBitFields<32, unsigned char>.1' into 'hls::AXISetBitFields<32, unsigned char>' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_axi_io.h:100).
+INFO: [XFORM 203-603] Inlining function 'hls::AXISetBitFields<32, unsigned char>' into 'hls::Mat2AXIvideo<32, 1080, 1920, 0>' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_io.h:143).
+Command         transform done; 5.343 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:08 ; elapsed = 00:00:43 . Memory (MB): peak = 323.043 ; gain = 236.848
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.g.1.bc -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIdEC2Ed8' into '_ZN9fp_structIdEC1Ed4' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:479) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIdEC1Ed4' into 'generic_isinf<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_isinf.h:16) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIdEC1Ed4' into 'generic_isnan<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_isnan.h:16) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::data' into 'fp_struct<double>::to_double' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_double' into 'fp_struct<double>::to_ieee' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:224) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:226) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:228) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:230) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:232) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:234) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:236) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIdEC1Ed4' into 'pow_reduce::pow_generic<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:323) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZNK9fp_structIdE4expvEv6' into 'pow_reduce::pow_generic<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:333) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isinf<double>' into 'pow_reduce::pow_generic<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:372) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isnan<double>' into 'pow_reduce::pow_generic<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:374) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::exp_Z1P_m_1' into 'pow_reduce::pow_generic<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:640) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:14) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<int, double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:116) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, double>' into '__hls_fptosi_double_i32' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:54) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::pow' into 'hls::hls_hough_line' (Hough/src/top.cpp:46) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sqrt' into 'hls::hls_hough_line' (Hough/src/top.cpp:46) automatically.
+Command         transform done; 2.137 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.g.2.prechk.bc -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command         transform done; 0.97 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:11 ; elapsed = 00:00:46 . Memory (MB): peak = 420.461 ; gain = 334.266
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.g.1.bc to D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/PJ_for_HLS/Hough/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.o.1.bc -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_dst.data_stream.V' (Hough/src/top.cpp:97).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_src.data_stream.V' (Hough/src/top.cpp:95).
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_src.data_stream.V' (Hough/src/top.cpp:95) .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'img_dst.data_stream.V' (Hough/src/top.cpp:97) .
+INFO: [XFORM 203-101] Partitioning array 'result.val' (Hough/src/top.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_data.val' (Hough/src/top.cpp:30) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'scl.val' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:670) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pix.val' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_io.h:115) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'scl.val' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_core.h:670) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pix.val' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_io.h:56) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'img_src.data_stream.V' (Hough/src/top.cpp:95) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'img_dst.data_stream.V' (Hough/src/top.cpp:97) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIdEC2Ed8' into '_ZN9fp_structIdEC1Ed4' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:479) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIdEC1Ed4' into 'generic_isinf<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_isinf.h:16) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIdEC1Ed4' into 'generic_isnan<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_isnan.h:16) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::data' into 'fp_struct<double>::to_double' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_double' into 'fp_struct<double>::to_ieee' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:224) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:226) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:228) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:230) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:232) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:234) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>' into 'pow_reduce::pow_traits<double>::log_range_reduction<71>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:236) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIdEC1Ed4' into 'pow_reduce::pow_generic<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:323) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZNK9fp_structIdE4expvEv6' into 'pow_reduce::pow_generic<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:333) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isinf<double>' into 'pow_reduce::pow_generic<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:372) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isnan<double>' into 'pow_reduce::pow_generic<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:374) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'pow_reduce::pow_generic<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:411) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::exp_Z1P_m_1' into 'pow_reduce::pow_generic<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:640) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:14) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<int, double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:116) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, double>' into '__hls_fptosi_double_i32' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:54) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::pow' into 'hls::hls_hough_line' (Hough/src/top.cpp:46) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sqrt' into 'hls::hls_hough_line' (Hough/src/top.cpp:46) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'hls::hls_hough_line' (Hough/src/top.cpp:46) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::Mat2AXIvideo<32, 1080, 1920, 0>' into 'hls_hough' (Hough/src/top.cpp:101) automatically.
+Command         transform done; 4.896 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.o.1.tmp.bc -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:319:19) to (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:406:5) in function 'pow_reduce::pow_generic<double>'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:449:5) to (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:455:5) in function 'pow_reduce::pow_generic<double>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:487:26) to (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:656:5) in function 'pow_reduce::pow_generic<double>'... converting 9 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::log_range_reduction<71>' into 'pow_reduce::pow_generic<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:547) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'pow_reduce::pow_generic<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:319)...7 expression(s) balanced.
+Command         transform done; 2.395 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:53 . Memory (MB): peak = 576.906 ; gain = 490.711
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.o.2.bc -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-631] Renaming function 'pow_reduce::pow_generic<double>' to 'pow_generic<double>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_pow.h:319)
+WARNING: [XFORM 203-631] Renaming function 'hls::hls_hough_line' to 'hls_hough_line' (Hough/src/top.cpp:6)
+WARNING: [XFORM 203-631] Renaming function 'hls::AXIvideo2Mat<32, 1080, 1920, 0>' to 'AXIvideo2Mat' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_io.h:49:9)
+Command         transform done; 3.041 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:56 . Memory (MB): peak = 651.523 ; gain = 565.328
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 24.155 sec.
+Command     elaborate done; 54.392 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'hls_hough' ...
+Execute       ap_set_top_model hls_hough 
+WARNING: [SYN 201-103] Legalizing function name 'pow_generic<double>' to 'pow_generic_double_s'.
+Execute       get_model_list hls_hough -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model hls_hough 
+Execute       preproc_iomode -model hls_hough_line 
+Execute       preproc_iomode -model pow_generic<double> 
+Execute       preproc_iomode -model AXIvideo2Mat 
+Execute       get_model_list hls_hough -filter all-wo-channel 
+INFO-FLOW: Model list for configure: AXIvideo2Mat pow_generic<double> hls_hough_line hls_hough
+INFO-FLOW: Configuring Module : AXIvideo2Mat ...
+Execute       set_default_model AXIvideo2Mat 
+Execute       apply_spec_resource_limit AXIvideo2Mat 
+INFO-FLOW: Configuring Module : pow_generic<double> ...
+Execute       set_default_model pow_generic<double> 
+Execute       apply_spec_resource_limit pow_generic<double> 
+INFO-FLOW: Configuring Module : hls_hough_line ...
+Execute       set_default_model hls_hough_line 
+Execute       apply_spec_resource_limit hls_hough_line 
+INFO-FLOW: Configuring Module : hls_hough ...
+Execute       set_default_model hls_hough 
+Execute       apply_spec_resource_limit hls_hough 
+INFO-FLOW: Model list for preprocess: AXIvideo2Mat pow_generic<double> hls_hough_line hls_hough
+INFO-FLOW: Preprocessing Module: AXIvideo2Mat ...
+Execute       set_default_model AXIvideo2Mat 
+Execute       cdfg_preprocess -model AXIvideo2Mat 
+Execute       rtl_gen_preprocess AXIvideo2Mat 
+INFO-FLOW: Preprocessing Module: pow_generic<double> ...
+Execute       set_default_model pow_generic<double> 
+Execute       cdfg_preprocess -model pow_generic<double> 
+Execute       rtl_gen_preprocess pow_generic<double> 
+INFO-FLOW: Preprocessing Module: hls_hough_line ...
+Execute       set_default_model hls_hough_line 
+Execute       cdfg_preprocess -model hls_hough_line 
+Execute       rtl_gen_preprocess hls_hough_line 
+INFO-FLOW: Preprocessing Module: hls_hough ...
+Execute       set_default_model hls_hough 
+Execute       cdfg_preprocess -model hls_hough 
+Execute       rtl_gen_preprocess hls_hough 
+INFO-FLOW: Model list for synthesis: AXIvideo2Mat pow_generic<double> hls_hough_line hls_hough
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2Mat' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model AXIvideo2Mat 
+Execute       schedule -model AXIvideo2Mat 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_start'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.28 sec.
+INFO: [HLS 200-111]  Elapsed time: 56.814 seconds; current allocated memory: 564.672 MB.
+Execute       report -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/AXIvideo2Mat.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 3 loops out of a total 4 loops have been pipelined in this design.
+Execute       db_write -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/AXIvideo2Mat.sched.adb -f 
+INFO-FLOW: Finish scheduling AXIvideo2Mat.
+Execute       set_default_model AXIvideo2Mat 
+Execute       bind -model AXIvideo2Mat 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=AXIvideo2Mat
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 564.959 MB.
+Execute       report -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/AXIvideo2Mat.verbose.bind.rpt -verbose -f 
+Execute       db_write -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/AXIvideo2Mat.bind.adb -f 
+INFO-FLOW: Finish binding AXIvideo2Mat.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pow_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model pow_generic<double> 
+Execute       schedule -model pow_generic<double> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'pow_generic<double>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 23.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.515 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.825 seconds; current allocated memory: 566.124 MB.
+Execute       report -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/pow_generic_double_s.verbose.sched.rpt -verbose -f 
+Command       report done; 0.235 sec.
+Execute       db_write -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/pow_generic_double_s.sched.adb -f 
+Command       db_write done; 0.343 sec.
+INFO-FLOW: Finish scheduling pow_generic<double>.
+Execute       set_default_model pow_generic<double> 
+Execute       bind -model pow_generic<double> 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=pow_generic<double>
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.212 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.995 seconds; current allocated memory: 567.249 MB.
+Execute       report -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/pow_generic_double_s.verbose.bind.rpt -verbose -f 
+Command       report done; 0.73 sec.
+Execute       db_write -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/pow_generic_double_s.bind.adb -f 
+Command       db_write done; 0.216 sec.
+INFO-FLOW: Finish binding pow_generic<double>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hls_hough_line' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model hls_hough_line 
+Execute       schedule -model hls_hough_line 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.411 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.586 seconds; current allocated memory: 568.226 MB.
+Execute       report -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough_line.verbose.sched.rpt -verbose -f 
+Command       report done; 0.313 sec.
+Execute       db_write -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough_line.sched.adb -f 
+Command       db_write done; 0.181 sec.
+INFO-FLOW: Finish scheduling hls_hough_line.
+Execute       set_default_model hls_hough_line 
+Execute       bind -model hls_hough_line 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=hls_hough_line
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 1.732 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.398 seconds; current allocated memory: 569.483 MB.
+Execute       report -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough_line.verbose.bind.rpt -verbose -f 
+Command       report done; 1.503 sec.
+Execute       db_write -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough_line.bind.adb -f 
+Command       db_write done; 0.174 sec.
+INFO-FLOW: Finish binding hls_hough_line.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hls_hough' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model hls_hough 
+Execute       schedule -model hls_hough 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.119 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.967 seconds; current allocated memory: 569.892 MB.
+Execute       report -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.sched.adb -f 
+INFO-FLOW: Finish scheduling hls_hough.
+Execute       set_default_model hls_hough 
+Execute       bind -model hls_hough 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=hls_hough
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 1.012 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.274 seconds; current allocated memory: 570.352 MB.
+Execute       report -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.verbose.bind.rpt -verbose -f 
+Command       report done; 1.204 sec.
+Execute       db_write -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.bind.adb -f 
+INFO-FLOW: Finish binding hls_hough.
+Execute       get_model_list hls_hough -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess AXIvideo2Mat 
+Execute       rtl_gen_preprocess pow_generic<double> 
+Execute       rtl_gen_preprocess hls_hough_line 
+Execute       rtl_gen_preprocess hls_hough 
+INFO-FLOW: Model list for RTL generation: AXIvideo2Mat pow_generic<double> hls_hough_line hls_hough
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2Mat' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model AXIvideo2Mat -vendor xilinx -mg_file D:/PJ_for_HLS/Hough/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2Mat'.
+INFO: [HLS 200-111]  Elapsed time: 1.484 seconds; current allocated memory: 571.036 MB.
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.rtl_wrap.cfg.tcl 
+Execute       gen_rtl AXIvideo2Mat -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/PJ_for_HLS/Hough/solution1/syn/systemc/AXIvideo2Mat -synmodules AXIvideo2Mat pow_generic<double> hls_hough_line hls_hough 
+Execute       gen_rtl AXIvideo2Mat -style xilinx -f -lang vhdl -o D:/PJ_for_HLS/Hough/solution1/syn/vhdl/AXIvideo2Mat 
+Execute       gen_rtl AXIvideo2Mat -style xilinx -f -lang vlog -o D:/PJ_for_HLS/Hough/solution1/syn/verilog/AXIvideo2Mat 
+Execute       gen_tb_info AXIvideo2Mat -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/AXIvideo2Mat -p D:/PJ_for_HLS/Hough/solution1/.autopilot/db 
+Execute       report -model AXIvideo2Mat -o D:/PJ_for_HLS/Hough/solution1/syn/report/AXIvideo2Mat_csynth.rpt -f 
+Execute       report -model AXIvideo2Mat -o D:/PJ_for_HLS/Hough/solution1/syn/report/AXIvideo2Mat_csynth.xml -f -x 
+Execute       report -model AXIvideo2Mat -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/AXIvideo2Mat.verbose.rpt -verbose -f 
+Execute       db_write -model AXIvideo2Mat -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/AXIvideo2Mat.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pow_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model pow_generic<double> -vendor xilinx -mg_file D:/PJ_for_HLS/Hough/solution1/.autopilot/db/pow_generic_double_s.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_20' to 'pow_generic_doublbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_19' to 'pow_generic_doublcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_16' to 'pow_generic_doubldEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_17' to 'pow_generic_doubleOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_9' to 'pow_generic_doublfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_12' to 'pow_generic_doublg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_13' to 'pow_generic_doublhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_14' to 'pow_generic_doublibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_15' to 'pow_generic_doubljbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_18' to 'pow_generic_doublkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo' to 'pow_generic_doubllbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymo_21' to 'pow_generic_doublmb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hls_hough_mac_muladd_16ns_16s_19s_31_1_1' to 'hls_hough_mac_mulncg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'hls_hough_mac_mulncg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pow_generic_double_s'.
+Command       create_rtl_model done; 0.802 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.341 seconds; current allocated memory: 573.853 MB.
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.rtl_wrap.cfg.tcl 
+Execute       gen_rtl pow_generic<double> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/PJ_for_HLS/Hough/solution1/syn/systemc/pow_generic_double_s -synmodules AXIvideo2Mat pow_generic<double> hls_hough_line hls_hough 
+Execute       gen_rtl pow_generic<double> -style xilinx -f -lang vhdl -o D:/PJ_for_HLS/Hough/solution1/syn/vhdl/pow_generic_double_s 
+Execute       gen_rtl pow_generic<double> -style xilinx -f -lang vlog -o D:/PJ_for_HLS/Hough/solution1/syn/verilog/pow_generic_double_s 
+Execute       gen_tb_info pow_generic<double> -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/pow_generic_double_s -p D:/PJ_for_HLS/Hough/solution1/.autopilot/db 
+Command       gen_tb_info done; 0.214 sec.
+Execute       report -model pow_generic<double> -o D:/PJ_for_HLS/Hough/solution1/syn/report/pow_generic_double_s_csynth.rpt -f 
+Command       report done; 0.317 sec.
+Execute       report -model pow_generic<double> -o D:/PJ_for_HLS/Hough/solution1/syn/report/pow_generic_double_s_csynth.xml -f -x 
+Command       report done; 0.231 sec.
+Execute       report -model pow_generic<double> -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/pow_generic_double_s.verbose.rpt -verbose -f 
+Command       report done; 1.15 sec.
+Execute       db_write -model pow_generic<double> -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/pow_generic_double_s.adb -f 
+Command       db_write done; 0.5 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hls_hough_line' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model hls_hough_line -vendor xilinx -mg_file D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough_line.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'hls_hough_line_p_count' to 'hls_hough_line_p_ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hls_hough_dadddsub_64ns_64ns_64_5_full_dsp_1' to 'hls_hough_dadddsupcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hls_hough_sitodp_32ns_64_4_1' to 'hls_hough_sitodp_qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'hls_hough_dsqrt_64ns_64ns_64_21_1' to 'hls_hough_dsqrt_6rcU' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'hls_hough_dadddsupcA': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hls_hough_dsqrt_6rcU': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hls_hough_sitodp_qcK': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hls_hough_line'.
+Command       create_rtl_model done; 0.24 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.046 seconds; current allocated memory: 576.344 MB.
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.rtl_wrap.cfg.tcl 
+Execute       gen_rtl hls_hough_line -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/PJ_for_HLS/Hough/solution1/syn/systemc/hls_hough_line -synmodules AXIvideo2Mat pow_generic<double> hls_hough_line hls_hough 
+Execute       gen_rtl hls_hough_line -style xilinx -f -lang vhdl -o D:/PJ_for_HLS/Hough/solution1/syn/vhdl/hls_hough_line 
+Execute       gen_rtl hls_hough_line -style xilinx -f -lang vlog -o D:/PJ_for_HLS/Hough/solution1/syn/verilog/hls_hough_line 
+Execute       gen_tb_info hls_hough_line -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough_line -p D:/PJ_for_HLS/Hough/solution1/.autopilot/db 
+Execute       report -model hls_hough_line -o D:/PJ_for_HLS/Hough/solution1/syn/report/hls_hough_line_csynth.rpt -f 
+Execute       report -model hls_hough_line -o D:/PJ_for_HLS/Hough/solution1/syn/report/hls_hough_line_csynth.xml -f -x 
+Command       report done; 0.107 sec.
+Execute       report -model hls_hough_line -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough_line.verbose.rpt -verbose -f 
+Command       report done; 1.406 sec.
+Execute       db_write -model hls_hough_line -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough_line.adb -f 
+Command       db_write done; 0.388 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hls_hough' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model hls_hough -vendor xilinx -mg_file D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/src_axi_V_data_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/src_axi_V_keep_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/src_axi_V_strb_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/src_axi_V_user_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/src_axi_V_last_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/src_axi_V_id_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/src_axi_V_dest_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/dst_axi_V_data_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/dst_axi_V_keep_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/dst_axi_V_strb_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/dst_axi_V_user_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/dst_axi_V_last_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/dst_axi_V_id_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/dst_axi_V_dest_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/rows' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hls_hough/cols' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'hls_hough' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hls_hough'.
+Command       create_rtl_model done; 0.178 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.736 seconds; current allocated memory: 577.430 MB.
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.rtl_wrap.cfg.tcl 
+Execute       gen_rtl hls_hough -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/PJ_for_HLS/Hough/solution1/syn/systemc/hls_hough -synmodules AXIvideo2Mat pow_generic<double> hls_hough_line hls_hough 
+Execute       gen_rtl hls_hough -istop -style xilinx -f -lang vhdl -o D:/PJ_for_HLS/Hough/solution1/syn/vhdl/hls_hough 
+Execute       gen_rtl hls_hough -istop -style xilinx -f -lang vlog -o D:/PJ_for_HLS/Hough/solution1/syn/verilog/hls_hough 
+Execute       export_constraint_db -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.constraint.tcl -f -tool general 
+Execute       report -model hls_hough -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.design.xml -verbose -f -dv 
+Command       report done; 0.702 sec.
+Execute       report -model hls_hough -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info hls_hough -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough -p D:/PJ_for_HLS/Hough/solution1/.autopilot/db 
+Execute       report -model hls_hough -o D:/PJ_for_HLS/Hough/solution1/syn/report/hls_hough_csynth.rpt -f 
+Execute       report -model hls_hough -o D:/PJ_for_HLS/Hough/solution1/syn/report/hls_hough_csynth.xml -f -x 
+Execute       report -model hls_hough -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.verbose.rpt -verbose -f 
+Command       report done; 1.173 sec.
+Execute       db_write -model hls_hough -o D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.adb -f 
+Command       db_write done; 0.163 sec.
+Execute       sc_get_clocks hls_hough 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain hls_hough 
+INFO-FLOW: Model list for RTL component generation: AXIvideo2Mat pow_generic<double> hls_hough_line hls_hough
+INFO-FLOW: Handling components in module [AXIvideo2Mat] ... 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+INFO-FLOW: Handling components in module [pow_generic_double_s] ... 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/pow_generic_double_s.compgen.tcl 
+INFO-FLOW: Found component hls_hough_mac_mulncg.
+INFO-FLOW: Append model hls_hough_mac_mulncg
+INFO-FLOW: Found component pow_generic_doublbkb.
+INFO-FLOW: Append model pow_generic_doublbkb
+INFO-FLOW: Found component pow_generic_doublcud.
+INFO-FLOW: Append model pow_generic_doublcud
+INFO-FLOW: Found component pow_generic_doubldEe.
+INFO-FLOW: Append model pow_generic_doubldEe
+INFO-FLOW: Found component pow_generic_doubleOg.
+INFO-FLOW: Append model pow_generic_doubleOg
+INFO-FLOW: Found component pow_generic_doublfYi.
+INFO-FLOW: Append model pow_generic_doublfYi
+INFO-FLOW: Found component pow_generic_doublg8j.
+INFO-FLOW: Append model pow_generic_doublg8j
+INFO-FLOW: Found component pow_generic_doublhbi.
+INFO-FLOW: Append model pow_generic_doublhbi
+INFO-FLOW: Found component pow_generic_doublibs.
+INFO-FLOW: Append model pow_generic_doublibs
+INFO-FLOW: Found component pow_generic_doubljbC.
+INFO-FLOW: Append model pow_generic_doubljbC
+INFO-FLOW: Found component pow_generic_doublkbM.
+INFO-FLOW: Append model pow_generic_doublkbM
+INFO-FLOW: Found component pow_generic_doubllbW.
+INFO-FLOW: Append model pow_generic_doubllbW
+INFO-FLOW: Found component pow_generic_doublmb6.
+INFO-FLOW: Append model pow_generic_doublmb6
+INFO-FLOW: Handling components in module [hls_hough_line] ... 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough_line.compgen.tcl 
+INFO-FLOW: Found component hls_hough_dadddsupcA.
+INFO-FLOW: Append model hls_hough_dadddsupcA
+INFO-FLOW: Found component hls_hough_sitodp_qcK.
+INFO-FLOW: Append model hls_hough_sitodp_qcK
+INFO-FLOW: Found component hls_hough_dsqrt_6rcU.
+INFO-FLOW: Append model hls_hough_dsqrt_6rcU
+INFO-FLOW: Found component hls_hough_line_p_ocq.
+INFO-FLOW: Append model hls_hough_line_p_ocq
+INFO-FLOW: Handling components in module [hls_hough] ... 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.compgen.tcl 
+INFO-FLOW: Found component fifo_w8_d64_A.
+INFO-FLOW: Append model fifo_w8_d64_A
+INFO-FLOW: Found component fifo_w8_d64_A.
+INFO-FLOW: Append model fifo_w8_d64_A
+INFO-FLOW: Append model AXIvideo2Mat
+INFO-FLOW: Append model pow_generic_double_s
+INFO-FLOW: Append model hls_hough_line
+INFO-FLOW: Append model hls_hough
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: hls_hough_mac_mulncg pow_generic_doublbkb pow_generic_doublcud pow_generic_doubldEe pow_generic_doubleOg pow_generic_doublfYi pow_generic_doublg8j pow_generic_doublhbi pow_generic_doublibs pow_generic_doubljbC pow_generic_doublkbM pow_generic_doubllbW pow_generic_doublmb6 hls_hough_dadddsupcA hls_hough_sitodp_qcK hls_hough_dsqrt_6rcU hls_hough_line_p_ocq fifo_w8_d64_A fifo_w8_d64_A AXIvideo2Mat pow_generic_double_s hls_hough_line hls_hough
+INFO-FLOW: To file: write model hls_hough_mac_mulncg
+INFO-FLOW: To file: write model pow_generic_doublbkb
+INFO-FLOW: To file: write model pow_generic_doublcud
+INFO-FLOW: To file: write model pow_generic_doubldEe
+INFO-FLOW: To file: write model pow_generic_doubleOg
+INFO-FLOW: To file: write model pow_generic_doublfYi
+INFO-FLOW: To file: write model pow_generic_doublg8j
+INFO-FLOW: To file: write model pow_generic_doublhbi
+INFO-FLOW: To file: write model pow_generic_doublibs
+INFO-FLOW: To file: write model pow_generic_doubljbC
+INFO-FLOW: To file: write model pow_generic_doublkbM
+INFO-FLOW: To file: write model pow_generic_doubllbW
+INFO-FLOW: To file: write model pow_generic_doublmb6
+INFO-FLOW: To file: write model hls_hough_dadddsupcA
+INFO-FLOW: To file: write model hls_hough_sitodp_qcK
+INFO-FLOW: To file: write model hls_hough_dsqrt_6rcU
+INFO-FLOW: To file: write model hls_hough_line_p_ocq
+INFO-FLOW: To file: write model fifo_w8_d64_A
+INFO-FLOW: To file: write model fifo_w8_d64_A
+INFO-FLOW: To file: write model AXIvideo2Mat
+INFO-FLOW: To file: write model pow_generic_double_s
+INFO-FLOW: To file: write model hls_hough_line
+INFO-FLOW: To file: write model hls_hough
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d D:/PJ_for_HLS/Hough/solution1
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu.gen 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.152 sec.
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.225 sec.
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.231 sec.
+Command       ap_source done; 0.231 sec.
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/pow_generic_double_s.compgen.tcl 
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_doublbkb_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_doublcud_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_doubldEe_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_doubleOg_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_doublfYi_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_doublg8j_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_doublhbi_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_doublibs_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_doubljbC_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_doublkbM_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_doubllbW_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'pow_generic_doublmb6_rom' using auto ROMs.
+Command       ap_source done; 1.597 sec.
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough_line.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'hls_hough_line_p_ocq_ram (RAM)' using block RAMs.
+Command       ap_source done; 0.334 sec.
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.compgen.tcl 
+INFO: [RTMG 210-285] Implementing FIFO 'img_src_data_stream_s_U(fifo_w8_d64_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'img_dst_data_stream_s_U(fifo_w8_d64_A)' using Shift Registers.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d D:/PJ_for_HLS/Hough/solution1
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu.gen 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.114 sec.
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.18 sec.
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.187 sec.
+Command       ap_source done; 0.188 sec.
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=hls_hough xml_exists=0
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.rtl_wrap.cfg.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.rtl_wrap.cfg.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.rtl_wrap.cfg.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.tbgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/pow_generic_double_s.compgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough_line.compgen.tcl 
+Command       ap_source done; 0.148 sec.
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/pow_generic_double_s.compgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough_line.compgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/AXIvideo2Mat.compgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/pow_generic_double_s.compgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough_line.compgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.compgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.constraint.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=34
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=16
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=23 #gSsdmPorts=34
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.tbgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.tbgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.tbgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.tbgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.tbgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.tbgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.tbgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.tbgen.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_export -xo 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/hls_hough.constraint.tcl 
+Execute       sc_get_clocks hls_hough 
+Execute       source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/impl/misc/hls_hough_ap_dadddsub_3_full_dsp_64_ip.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/impl/misc/hls_hough_ap_dsqrt_19_no_dsp_64_ip.tcl 
+Execute       source D:/PJ_for_HLS/Hough/solution1/impl/misc/hls_hough_ap_sitodp_2_no_dsp_32_ip.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: D:/PJ_for_HLS/Hough/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:37 ; elapsed = 00:01:23 . Memory (MB): peak = 662.801 ; gain = 576.605
+INFO: [SYSC 207-301] Generating SystemC RTL for hls_hough.
+INFO: [VHDL 208-304] Generating VHDL RTL for hls_hough.
+INFO: [VLOG 209-307] Generating Verilog RTL for hls_hough.
+Command     autosyn done; 26.293 sec.
+Execute     get_part 
+Execute     get_config_export -sdx_tcl 
+Command   csynth_design done; 80.713 sec.
+Command ap_source done; 81.303 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace D:/PJ_for_HLS/Hough/solution1 opened at Tue Jul 28 17:05:59 +0800 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/dsp48e2.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 30300} {LUT 242400}    {FF 484800} {DSP48E 1920}   {BRAM 1200}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu.gen 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.205 sec.
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.304 sec.
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.309 sec.
+Command     ap_source done; 0.309 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu_fpv7 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu_hp.hlp 
+Execute     source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute       source E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xcku115-flvd1517-2-e 
+Execute       add_library xilinx/kintexu/kintexu:xcku115:-flvd1517:-2-e 
+Execute         get_default_platform 
+Execute         license_isbetapart xcku115 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 82920} {LUT 663360}    {FF 1326720} {DSP48E 5520}  {BRAM 4320} {SLR 2}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/kintexu/kintexu_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xcku115-flvd1517-2-e'
+Execute       get_default_platform 
+Command     set_part done; 0.164 sec.
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 82920} {LUT 663360}    {FF 1326720} {DSP48E 5520}  {BRAM 4320} {SLR 2}  
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.625 sec.
+Execute   csim_design -quiet 
+Execute     source D:/PJ_for_HLS/Hough/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted D:/PJ_for_HLS/Hough/src/test.cpp 
+Execute     is_xip D:/PJ_for_HLS/Hough/src/test.cpp 
+Execute     is_encrypted D:/PJ_for_HLS/Hough/src/circle2.bmp 
+Execute     is_xip D:/PJ_for_HLS/Hough/src/circle2.bmp 
+Execute     is_encrypted D:/PJ_for_HLS/Hough/src/Opencv_top.h 
+Execute     is_xip D:/PJ_for_HLS/Hough/src/Opencv_top.h 
+Execute     is_encrypted D:/PJ_for_HLS/Hough/src/Opencv_top.cpp 
+Execute     is_xip D:/PJ_for_HLS/Hough/src/Opencv_top.cpp 
+Execute     is_encrypted D:/PJ_for_HLS/Hough/src/top.h 
+Execute     is_xip D:/PJ_for_HLS/Hough/src/top.h 
+Execute     is_encrypted D:/PJ_for_HLS/Hough/src/top.cpp 
+Execute     is_xip D:/PJ_for_HLS/Hough/src/top.cpp 
+Execute     get_default_platform 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 2.508 sec.
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 4.418 sec.
+Command ap_source done; error code: 1; 5.052 sec.
+Execute cleanup_all 

@@ -1,0 +1,54 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'threshold'" level="0">
+<item name = "Date">Tue Jul 28 16:40:47 2020
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">otsu_threshold</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">kintexu</item>
+<item name = "Target device">xcku115-flvd1517-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.629, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">9257, 3001865, 9257, 3001865, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">256, 256, 1, -, -, 256, no</column>
+<column name="- loop_height">0, 2077920, 4 ~ 1924, -, -, 0 ~ 1080, no</column>
+<column name=" + loop_width">1, 1921, 3, 1, 1, 0 ~ 1920, yes</column>
+<column name="- Loop 3">2, 2, 1, 1, 1, 2, yes</column>
+<column name="- loop_normalize">268, 268, 14, 1, 1, 256, yes</column>
+<column name="- loop_forward">8448, 923136, 33 ~ 3606, -, -, 256, no</column>
+<column name=" + loop_front">0, 1278, 9, 5, 5, 0 ~ 255, yes</column>
+<column name=" + loop_back">9, 2304, 9, -, -, 1 ~ 256, no</column>
+<column name="- loop_map">263, 263, 9, 1, 1, 256, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

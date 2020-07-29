@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="top.cpp" path="D:\PJ_for_HLS\skin_detect\src\top.cpp"/>
+    <originFiles name="top.h" path="D:\PJ_for_HLS\skin_detect\src\top.h"/>
+  </source>
+  <testbench>
+    <originFiles name="test.cpp" path="D:\PJ_for_HLS\skin_detect\src\test.cpp"/>
+    <originFiles name="test.jpg" path="D:\PJ_for_HLS\skin_detect\test.jpg"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

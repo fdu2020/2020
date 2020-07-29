@@ -1,0 +1,40 @@
+INFO: [HLS 200-10] Running 'E:/Xilinx/Vivado_2018.3/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Liao Wenhao' on host 'pc-20181107mpmq' (Windows NT_amd64 version 6.2) on Fri Jul 24 15:12:39 +0800 2020
+INFO: [HLS 200-10] In directory 'D:/PJ_for_HLS/video_test'
+INFO: [HLS 200-10] Opening project 'D:/PJ_for_HLS/video_test/video_test'.
+INFO: [HLS 200-10] Opening solution 'D:/PJ_for_HLS/video_test/video_test/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xcku115-flva1517-2-e'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../src/test.cpp in debug mode
+   Generating csim.exe
+In file included from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/hls_fpo.h:186,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/hls_half.h:44,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/etc/ap_private.h:90,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/ap_common.h:641,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/ap_int.h:54,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/ap_axi_sdata.h:86,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/hls/hls_axi_io.h:39,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/hls_video.h:48,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/hls_opencv.h:50,
+                 from ../../../src/test.cpp:1:
+E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/hls_fpo.h:186:0,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/hls_half.h:44,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/etc/ap_private.h:90,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/ap_common.h:641,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/ap_int.h:54,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/ap_axi_sdata.h:86,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/hls/hls_axi_io.h:39,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/hls_video.h:48,
+                 from E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/hls_opencv.h:50,
+                 from ../../../src/test.cpp:1:
+E:/Xilinx/Vivado_2018.3/Vivado/2018.3/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

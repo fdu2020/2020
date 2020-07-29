@@ -1,0 +1,9 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="15" filename="shift_led/src/top.cpp" linenumber="10" name="exitcond" contextFuncName="shift_led" moduleName="shift_led" rtlName="exitcond_fu_77_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="20" fileDirectory="D:\PJ_for_HLS"><\/item>
+<item  id="17" filename="shift_led/src/top.cpp" linenumber="10" name="i_V" contextFuncName="shift_led" moduleName="shift_led" rtlName="i_V_fu_83_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="33" fileDirectory="D:\PJ_for_HLS"><\/item>
+<item  id="20" filename="shift_led/src/top.cpp" linenumber="12" name="tmp" contextFuncName="shift_led" moduleName="shift_led" rtlName="tmp_fu_89_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="20" fileDirectory="D:\PJ_for_HLS"><\/item>
+<item  id="24" filename="shift_led/src/top.cpp" linenumber="14" name="tmp_1" contextFuncName="shift_led" moduleName="shift_led" rtlName="tmp_1_fu_98_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\PJ_for_HLS"><\/item>
+<item  id="26" filename="shift_led/src/top.cpp" linenumber="14" name="tmp_led_V" contextFuncName="shift_led" moduleName="shift_led" rtlName="tmp_led_V_fu_110_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\PJ_for_HLS"><\/item>
+<\/annotationInfo>
+</annotationInfo>

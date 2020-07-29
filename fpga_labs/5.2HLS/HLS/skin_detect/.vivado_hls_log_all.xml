@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'hls_skin_dection' consists of the following:&#xD;&#xA;&#x9;'mul' operation of DSP[78] ('tmp_12_i', skin_detect/src/top.cpp:27) [75]  (3.36 ns)&#xD;&#xA;&#x9;'add' operation of DSP[78] ('tmp4', skin_detect/src/top.cpp:27) [78]  (3.82 ns)&#xD;&#xA;&#x9;'add' operation of DSP[79] ('tmp_15_i', skin_detect/src/top.cpp:27) [79]  (3.82 ns)" projectName="skin_detect" solutionName="solution1" date="2020-07-28T10:09:16.758+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (11ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="skin_detect" solutionName="solution1" date="2020-07-28T10:09:16.750+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'Block_Mat.exit45_pro' to 'Block_Mat_exit45_pro'." projectName="skin_detect" solutionName="solution1" date="2020-07-28T10:09:13.760+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'Block_Mat.exit45_proc161' to 'Block_Mat.exit45_pro' (skin_detect/src/top.cpp:47)" projectName="skin_detect" solutionName="solution1" date="2020-07-28T10:09:13.718+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::AXIvideo2Mat&lt;32, 1080, 1920, 4096>' to 'AXIvideo2Mat' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_io.h:49:9)" projectName="skin_detect" solutionName="solution1" date="2020-07-28T10:09:12.320+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::Mat2AXIvideo&lt;32, 1080, 1920, 4096>' to 'Mat2AXIvideo' (E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_io.h:78:50)" projectName="skin_detect" solutionName="solution1" date="2020-07-28T10:09:12.298+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::hls_skin_dection' to 'hls_skin_dection' (skin_detect/src/top.cpp:6)" projectName="skin_detect" solutionName="solution1" date="2020-07-28T10:09:12.291+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_0.data_stream.V' (skin_detect/src/top.cpp:46)." projectName="skin_detect" solutionName="solution1" date="2020-07-28T10:09:09.181+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'img_1.data_stream.V' (skin_detect/src/top.cpp:47)." projectName="skin_detect" solutionName="solution1" date="2020-07-28T10:09:08.975+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] E:/Xilinx/Vivado_2018.3/Vivado/2018.3/common/technology/autopilot/hls/hls_axi_io.h:78: variable-indexed range selection may cause suboptimal QoR." projectName="skin_detect" solutionName="solution1" date="2020-07-28T10:09:08.528+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

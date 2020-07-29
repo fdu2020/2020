@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="Top.cpp" path="D:\PJ_for_HLS\Sobel\src\Top.cpp"/>
+    <originFiles name="Top.h" path="D:\PJ_for_HLS\Sobel\src\Top.h"/>
+  </source>
+  <testbench>
+    <originFiles name="Opencv_top.cpp" path="D:\PJ_for_HLS\Sobel\src\Opencv_top.cpp"/>
+    <originFiles name="Opencv_top.h" path="D:\PJ_for_HLS\Sobel\src\Opencv_top.h"/>
+    <originFiles name="test.cpp" path="D:\PJ_for_HLS\Sobel\src\test.cpp"/>
+    <originFiles name="test_1080p.bmp" path="D:\PJ_for_HLS\Sobel\test_1080p.bmp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

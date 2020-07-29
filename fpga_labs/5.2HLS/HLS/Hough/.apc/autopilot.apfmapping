@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="top.h" path="D:\PJ_for_HLS\Hough\src\top.h"/>
+    <originFiles name="top.cpp" path="D:\PJ_for_HLS\Hough\src\top.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test.cpp" path="D:\PJ_for_HLS\Hough\src\test.cpp"/>
+    <originFiles name="circle2.bmp" path="D:\PJ_for_HLS\Hough\src\circle2.bmp"/>
+    <originFiles name="Opencv_top.h" path="D:\PJ_for_HLS\Hough\src\Opencv_top.h"/>
+    <originFiles name="Opencv_top.cpp" path="D:\PJ_for_HLS\Hough\src\Opencv_top.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

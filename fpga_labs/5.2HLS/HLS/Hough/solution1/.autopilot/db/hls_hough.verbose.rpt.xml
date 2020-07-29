@@ -1,0 +1,204 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'hls_hough'" level="0">
+<item name = "Date">Tue Jul 28 17:04:04 2020
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">Hough</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">kintexu</item>
+<item name = "Target device">xcku115-flvd1517-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.750, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_hls_hough_line_fu_218">hls_hough_line, ?, ?, ?, ?, none</column>
+<column name="grp_AXIvideo2Mat_fu_250">AXIvideo2Mat, 3, 2080083, 3, 2080083, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- loop_height">0, 2076840, 3 ~ 1923, -, -, 0 ~ 1080, no</column>
+<column name=" + loop_width">0, 1920, 2, 1, 1, 0 ~ 1920, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 189</column>
+<column name="FIFO">0, -, 528, 418</column>
+<column name="Instance">2000, 76, 13336, 17659</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 227</column>
+<column name="Register">-, -, 143, -</column>
+<specialColumn name="Available SLR">2160, 2760, 663360, 331680</specialColumn>
+<specialColumn name="Utilization SLR (%)">92, 2, 2, 5</specialColumn>
+<specialColumn name="Available">4320, 5520, 1326720, 663360</specialColumn>
+<specialColumn name="Utilization (%)">46, 1, 1, 2</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_AXIvideo2Mat_fu_250">AXIvideo2Mat, 0, 0, 242, 379</column>
+<column name="grp_hls_hough_line_fu_218">hls_hough_line, 2000, 76, 13094, 17280</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+<column name="img_dst_data_stream_s_fifo_U">0, 264, 209, 64, 8, 512</column>
+<column name="img_src_data_stream_s_fifo_U">0, 264, 209, 64, 8, 512</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_V_fu_292_p2">+, 0, 0, 39, 32, 1</column>
+<column name="j_V_fu_303_p2">+, 0, 0, 39, 32, 1</column>
+<column name="ret_V_fu_281_p2">+, 0, 0, 40, 33, 2</column>
+<column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
+<column name="dst_axi_V_id_V1_status">and, 0, 0, 2, 1, 1</column>
+<column name="axi_last_V_fu_313_p2">icmp, 0, 0, 21, 33, 33</column>
+<column name="exitcond1_i_fu_287_p2">icmp, 0, 0, 20, 32, 32</column>
+<column name="exitcond_i_fu_298_p2">icmp, 0, 0, 20, 32, 32</column>
+<column name="ap_block_state7_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">41, 8, 1, 8</column>
+<column name="ap_enable_reg_pp0_iter1">15, 3, 1, 3</column>
+<column name="dst_axi_V_data_V_blk_n">9, 2, 1, 2</column>
+<column name="dst_axi_V_dest_V_blk_n">9, 2, 1, 2</column>
+<column name="dst_axi_V_id_V_blk_n">9, 2, 1, 2</column>
+<column name="dst_axi_V_keep_V_blk_n">9, 2, 1, 2</column>
+<column name="dst_axi_V_last_V_blk_n">9, 2, 1, 2</column>
+<column name="dst_axi_V_strb_V_blk_n">9, 2, 1, 2</column>
+<column name="dst_axi_V_user_V_blk_n">9, 2, 1, 2</column>
+<column name="img_dst_data_stream_s_write">9, 2, 1, 2</column>
+<column name="img_src_data_stream_s_read">9, 2, 1, 2</column>
+<column name="img_src_data_stream_s_write">9, 2, 1, 2</column>
+<column name="src_axi_V_data_V_read">9, 2, 1, 2</column>
+<column name="src_axi_V_dest_V_read">9, 2, 1, 2</column>
+<column name="src_axi_V_id_V_read">9, 2, 1, 2</column>
+<column name="src_axi_V_keep_V_read">9, 2, 1, 2</column>
+<column name="src_axi_V_last_V_read">9, 2, 1, 2</column>
+<column name="src_axi_V_strb_V_read">9, 2, 1, 2</column>
+<column name="src_axi_V_user_V_read">9, 2, 1, 2</column>
+<column name="t_V_2_reg_207">9, 2, 32, 64</column>
+<column name="t_V_reg_196">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">7, 0, 7, 0</column>
+<column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="axi_last_V_reg_393">1, 0, 1, 0</column>
+<column name="exitcond_i_reg_384">1, 0, 1, 0</column>
+<column name="grp_AXIvideo2Mat_fu_250_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_hls_hough_line_fu_218_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_V_reg_379">32, 0, 32, 0</column>
+<column name="ret_V_reg_370">33, 0, 33, 0</column>
+<column name="t_V_2_reg_207">32, 0, 32, 0</column>
+<column name="t_V_reg_196">32, 0, 32, 0</column>
+<column name="tmp_user_V_fu_138">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, hls_hough, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, hls_hough, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, hls_hough, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, hls_hough, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, hls_hough, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, hls_hough, return value</column>
+<column name="src_axi_V_data_V_dout">in, 32, ap_fifo, src_axi_V_data_V, pointer</column>
+<column name="src_axi_V_data_V_empty_n">in, 1, ap_fifo, src_axi_V_data_V, pointer</column>
+<column name="src_axi_V_data_V_read">out, 1, ap_fifo, src_axi_V_data_V, pointer</column>
+<column name="src_axi_V_keep_V_dout">in, 4, ap_fifo, src_axi_V_keep_V, pointer</column>
+<column name="src_axi_V_keep_V_empty_n">in, 1, ap_fifo, src_axi_V_keep_V, pointer</column>
+<column name="src_axi_V_keep_V_read">out, 1, ap_fifo, src_axi_V_keep_V, pointer</column>
+<column name="src_axi_V_strb_V_dout">in, 4, ap_fifo, src_axi_V_strb_V, pointer</column>
+<column name="src_axi_V_strb_V_empty_n">in, 1, ap_fifo, src_axi_V_strb_V, pointer</column>
+<column name="src_axi_V_strb_V_read">out, 1, ap_fifo, src_axi_V_strb_V, pointer</column>
+<column name="src_axi_V_user_V_dout">in, 1, ap_fifo, src_axi_V_user_V, pointer</column>
+<column name="src_axi_V_user_V_empty_n">in, 1, ap_fifo, src_axi_V_user_V, pointer</column>
+<column name="src_axi_V_user_V_read">out, 1, ap_fifo, src_axi_V_user_V, pointer</column>
+<column name="src_axi_V_last_V_dout">in, 1, ap_fifo, src_axi_V_last_V, pointer</column>
+<column name="src_axi_V_last_V_empty_n">in, 1, ap_fifo, src_axi_V_last_V, pointer</column>
+<column name="src_axi_V_last_V_read">out, 1, ap_fifo, src_axi_V_last_V, pointer</column>
+<column name="src_axi_V_id_V_dout">in, 1, ap_fifo, src_axi_V_id_V, pointer</column>
+<column name="src_axi_V_id_V_empty_n">in, 1, ap_fifo, src_axi_V_id_V, pointer</column>
+<column name="src_axi_V_id_V_read">out, 1, ap_fifo, src_axi_V_id_V, pointer</column>
+<column name="src_axi_V_dest_V_dout">in, 1, ap_fifo, src_axi_V_dest_V, pointer</column>
+<column name="src_axi_V_dest_V_empty_n">in, 1, ap_fifo, src_axi_V_dest_V, pointer</column>
+<column name="src_axi_V_dest_V_read">out, 1, ap_fifo, src_axi_V_dest_V, pointer</column>
+<column name="dst_axi_V_data_V_din">out, 32, ap_fifo, dst_axi_V_data_V, pointer</column>
+<column name="dst_axi_V_data_V_full_n">in, 1, ap_fifo, dst_axi_V_data_V, pointer</column>
+<column name="dst_axi_V_data_V_write">out, 1, ap_fifo, dst_axi_V_data_V, pointer</column>
+<column name="dst_axi_V_keep_V_din">out, 4, ap_fifo, dst_axi_V_keep_V, pointer</column>
+<column name="dst_axi_V_keep_V_full_n">in, 1, ap_fifo, dst_axi_V_keep_V, pointer</column>
+<column name="dst_axi_V_keep_V_write">out, 1, ap_fifo, dst_axi_V_keep_V, pointer</column>
+<column name="dst_axi_V_strb_V_din">out, 4, ap_fifo, dst_axi_V_strb_V, pointer</column>
+<column name="dst_axi_V_strb_V_full_n">in, 1, ap_fifo, dst_axi_V_strb_V, pointer</column>
+<column name="dst_axi_V_strb_V_write">out, 1, ap_fifo, dst_axi_V_strb_V, pointer</column>
+<column name="dst_axi_V_user_V_din">out, 1, ap_fifo, dst_axi_V_user_V, pointer</column>
+<column name="dst_axi_V_user_V_full_n">in, 1, ap_fifo, dst_axi_V_user_V, pointer</column>
+<column name="dst_axi_V_user_V_write">out, 1, ap_fifo, dst_axi_V_user_V, pointer</column>
+<column name="dst_axi_V_last_V_din">out, 1, ap_fifo, dst_axi_V_last_V, pointer</column>
+<column name="dst_axi_V_last_V_full_n">in, 1, ap_fifo, dst_axi_V_last_V, pointer</column>
+<column name="dst_axi_V_last_V_write">out, 1, ap_fifo, dst_axi_V_last_V, pointer</column>
+<column name="dst_axi_V_id_V_din">out, 1, ap_fifo, dst_axi_V_id_V, pointer</column>
+<column name="dst_axi_V_id_V_full_n">in, 1, ap_fifo, dst_axi_V_id_V, pointer</column>
+<column name="dst_axi_V_id_V_write">out, 1, ap_fifo, dst_axi_V_id_V, pointer</column>
+<column name="dst_axi_V_dest_V_din">out, 1, ap_fifo, dst_axi_V_dest_V, pointer</column>
+<column name="dst_axi_V_dest_V_full_n">in, 1, ap_fifo, dst_axi_V_dest_V, pointer</column>
+<column name="dst_axi_V_dest_V_write">out, 1, ap_fifo, dst_axi_V_dest_V, pointer</column>
+<column name="rows">in, 32, ap_none, rows, scalar</column>
+<column name="cols">in, 32, ap_none, cols, scalar</column>
+</table>
+</item>
+</section>
+</profile>

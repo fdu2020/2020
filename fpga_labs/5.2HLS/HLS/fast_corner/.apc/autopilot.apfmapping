@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="Top.cpp" path="D:\PJ_for_HLS\fast_corner\src\Top.cpp"/>
+    <originFiles name="top.h" path="D:\PJ_for_HLS\fast_corner\src\top.h"/>
+  </source>
+  <testbench>
+    <originFiles name="Test.cpp" path="D:\PJ_for_HLS\fast_corner\src\Test.cpp"/>
+    <originFiles name="test_1080p.bmp" path="D:\PJ_for_HLS\fast_corner\src\test_1080p.bmp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

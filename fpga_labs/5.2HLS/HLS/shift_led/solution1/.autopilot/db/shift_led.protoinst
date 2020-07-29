@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"shift_led": {
+			"proto_instances": {
+			}
+		}
+	}
+}

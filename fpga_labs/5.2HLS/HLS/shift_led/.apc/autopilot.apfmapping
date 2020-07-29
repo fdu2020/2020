@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="top.cpp" path="D:\PJ_for_HLS\shift_led\src\top.cpp"/>
+    <originFiles name="shift_led.h" path="D:\PJ_for_HLS\shift_led\src\shift_led.h"/>
+  </source>
+  <testbench>
+    <originFiles name="Test_shift_led.cpp" path="D:\PJ_for_HLS\shift_led\src\Test_shift_led.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

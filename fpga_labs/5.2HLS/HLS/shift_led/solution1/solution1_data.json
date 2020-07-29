@@ -1,0 +1,198 @@
+{
+  "Top": "shift_led",
+  "RtlTop": "shift_led",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "0",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "kintexu",
+    "Device": "xcku115",
+    "Package": "-flva1517",
+    "Speed": "-2-e"
+  },
+  "HlsSolution": {"Config": [
+      "config_export -description=8bit_shift_led",
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog"
+    ]},
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "IsCombLogic": "0",
+    "II": "x",
+    "Latency": "50000001",
+    "Uncertainty": "1.25"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "shift_led",
+    "Version": "1.0",
+    "DisplayName": "Shift_led",
+    "Revision": "",
+    "Description": "8bit_shift_led",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["..\/src\/top.cpp"],
+    "Vhdl": ["impl\/vhdl\/shift_led.vhd"],
+    "Verilog": ["impl\/verilog\/shift_led.v"],
+    "Misc": ["impl\/misc\/logo.png"],
+    "DesignXml": "D:\/PJ_for_HLS\/shift_led\/solution1\/.autopilot\/db\/shift_led.design.xml"
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "reset": "ap_rst"
+    },
+    "ap_ctrl": {
+      "type": "ap_ctrl",
+      "ctrl_ports": "ap_start ap_done ap_idle ap_ready",
+      "ctype": {
+        "start": {"Type": "bool"},
+        "done": {"Type": "bool"},
+        "idle": {"Type": "bool"},
+        "ready": {"Type": "bool"}
+      }
+    },
+    "ap_rst": {
+      "type": "reset",
+      "polarity": "ACTIVE_HIGH",
+      "ctype": {"RST": {"Type": "bool"}}
+    },
+    "led_i_V": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "real fixed signed 0",
+          "Width": "8"
+        }}
+    },
+    "led_o_V": {
+      "type": "data",
+      "dir": "out",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "real fixed signed 0",
+          "Width": "8"
+        }}
+    }
+  },
+  "RtlPorts": {
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_start": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_idle": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_ready": {
+      "dir": "out",
+      "width": "1"
+    },
+    "led_o_V": {
+      "dir": "out",
+      "width": "8"
+    },
+    "led_o_V_ap_vld": {
+      "dir": "out",
+      "width": "1"
+    },
+    "led_i_V": {
+      "dir": "in",
+      "width": "8"
+    },
+    "led_i_V_ap_vld": {
+      "dir": "in",
+      "width": "1"
+    }
+  },
+  "CPorts": {
+    "ap_ctrl": {
+      "interfaceRef": "ap_ctrl",
+      "dir": "out"
+    },
+    "led_o_V": {
+      "interfaceRef": "led_o_V",
+      "dir": "out",
+      "dataWidth": "8",
+      "handshakeRef": "ap_vld",
+      "firstOutLatency": "1"
+    },
+    "led_i_V": {
+      "interfaceRef": "led_i_V",
+      "dir": "in",
+      "dataWidth": "8",
+      "handshakeRef": "ap_vld"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {"ModuleName": "shift_led"},
+    "Metrics": {"shift_led": {
+        "Latency": {
+          "LatencyBest": "50000001",
+          "LatencyAvg": "50000001",
+          "LatencyWorst": "50000001",
+          "PipelineII": "50000002",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "1.461"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "50000000",
+            "Latency": "50000000",
+            "PipelineII": "",
+            "PipelineDepth": "1"
+          }],
+        "Area": {
+          "FF": "45",
+          "LUT": "144",
+          "BRAM_18K": "0",
+          "DSP48E": "0"
+        }
+      }}
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "shift_led",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.1",
+    "Time": "2020-07-23 16:31:42 +0800",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2018.3"
+  }
+}
