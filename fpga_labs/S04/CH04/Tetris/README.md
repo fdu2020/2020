@@ -97,7 +97,7 @@ Board对象中定义的游戏的玩法，包括消除完整的一行、游戏按
         return result
   ```
 ## GUI
-![Tetris_gui](https://github.com/Ramdoo/2020/blob/master/graph4README/Tetris_ui.png)
+![Tetris_gui](https://github.com/Ramdoo/2020-test/blob/master/graph4README/Tetris_ui.png)
 
 
 ## 未完成：
