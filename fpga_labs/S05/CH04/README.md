@@ -32,6 +32,62 @@ int write_index, read_index;
 
 只进行图像处理可以将三缓冲区换成一个缓冲区。
 
+
+## lwIP库配置
+
+参考[lwIP库的配置与使用](https://blog.csdn.net/FPGADesigner/article/details/88689771)
+
+在BSP Settings中勾选lwip库，在2018.3中对应lwip202，和lwip141有所不同。
+
+![20200805152537](https://raw.githubusercontent.com/wxiang357/Image/master/20200805152537.png)
+
+随后进行参数设置，将use_axieth_on_zynq，use_emaclite_on_zynq设为0：
+
+![20200805153742](https://raw.githubusercontent.com/wxiang357/Image/master/20200805153742.png)
+
+为了提高传输效率进行以下设置：
+
+![20200806135928](https://raw.githubusercontent.com/wxiang357/Image/master/20200806135928.png)
+
+![20200806135955](https://raw.githubusercontent.com/wxiang357/Image/master/20200806135955.png)
+
+![20200805155440](https://raw.githubusercontent.com/wxiang357/Image/master/20200805155440.png)
+
+![20200805160114](https://raw.githubusercontent.com/wxiang357/Image/master/20200805160114.png)
+
+使用Raw API时一般有类似下方的代码结构：
+
+```C++
+int main() 
+{
+    struct netif *netif, server_netif; 
+    ip_addr_t ipaddr, netmask, gw;
+    //板子的MAC地址
+    unsigned char mac_ethernet_address[] = 
+        {0x00, 0x0a, 0x35, 0x00, 0x01, 0x02};
+    
+    lwip_init();
+    
+    //把网络接口添加到netif_list, 并设为默认
+    if (!xemac_add(netif, &ipaddr, &netmask, 
+        &gw, mac_ethernet_address, EMAC_BASEADDR)) {
+        printf(“Error adding N/W interface\n\r”); 
+        return -1;
+    }
+    netif_set_default(netif);
+
+    platform_enable_interrupts();   //使能中断
+    netif_set_up(netif);  //指定网络是否打开
+    start_application();  //启动应用程序，设置回调
+    
+    
+    while (1) {
+        xemacif_input(netif); // 接收数据包
+        transfer_data();  //执行应用程序的特定功能
+    }
+}
+```
+
 ## TCP Server
 
 建立SDK自带的lwIP echo demo，`start_application`函数绑定、监听端口，并设置回调函数：
@@ -39,40 +95,40 @@ int write_index, read_index;
 ```C++
 int start_application()
 {
-	struct tcp_pcb *pcb;
-	err_t err;
-	unsigned port = 7;
+    struct tcp_pcb *pcb;
+    err_t err;
+    unsigned port = 7;
 
-	/* create new TCP PCB structure */
-	pcb = tcp_new_ip_type(IPADDR_TYPE_ANY);
-	if (!pcb) {
-		xil_printf("Error creating PCB. Out of Memory\n\r");
-		return -1;
-	}
+    /* create new TCP PCB structure */
+    pcb = tcp_new_ip_type(IPADDR_TYPE_ANY);
+    if (!pcb) {
+        xil_printf("Error creating PCB. Out of Memory\n\r");
+        return -1;
+    }
 
-	/* bind to specified @port */
-	err = tcp_bind(pcb, IP_ANY_TYPE, port);
-	if (err != ERR_OK) {
-		xil_printf("Unable to bind to port %d: err = %d\n\r", port, err);
-		return -2;
-	}
+    /* bind to specified @port */
+    err = tcp_bind(pcb, IP_ANY_TYPE, port);
+    if (err != ERR_OK) {
+        xil_printf("Unable to bind to port %d: err = %d\n\r", port, err);
+        return -2;
+    }
 
-	/* we do not need any arguments to callback functions */
-	tcp_arg(pcb, NULL);
+    /* we do not need any arguments to callback functions */
+    tcp_arg(pcb, NULL);
 
-	/* listen for connections */
-	pcb = tcp_listen(pcb);
-	if (!pcb) {
-		xil_printf("Out of memory while tcp_listen\n\r");
-		return -3;
-	}
+    /* listen for connections */
+    pcb = tcp_listen(pcb);
+    if (!pcb) {
+        xil_printf("Out of memory while tcp_listen\n\r");
+        return -3;
+    }
 
-	/* specify callback to use for incoming connections */
-	tcp_accept(pcb, accept_callback);
+    /* specify callback to use for incoming connections */
+    tcp_accept(pcb, accept_callback);
 
-	xil_printf("TCP echo server started @ port %d\n\r", port);
+    xil_printf("TCP echo server started @ port %d\n\r", port);
 
-	return 0;
+    return 0;
 }
 ```
 
@@ -80,23 +136,23 @@ int start_application()
 
 ```C++
 /* set the receive callback for this connection */
-	tcp_recv(newpcb, recv_callback);
+    tcp_recv(newpcb, recv_callback);
 ```
 
 在`recv_callback`中将接收的数据放到缓冲区中：
 
 ```C++
-	memcpy(temp_frame + num, (unsigned char *)p->payload, p->len);
-	num += p->len;
+    memcpy(temp_frame + num, (unsigned char *)p->payload, p->len);
+    num += p->len;
 
-	if (num >= IMAGE_SIZE) {
-		num = 0;
-		if (buffer_state[write_index] == STATE0) {
-			memcpy(frame_buffer[write_index], temp_frame, IMAGE_SIZE);
-			buffer_state[write_index] = STATE1;
-			write_index = (write_index + 1) % 3;
-		}
-	}
+    if (num >= IMAGE_SIZE) {
+        num = 0;
+        if (buffer_state[write_index] == STATE0) {
+            memcpy(frame_buffer[write_index], temp_frame, IMAGE_SIZE);
+            buffer_state[write_index] = STATE1;
+            write_index = (write_index + 1) % 3;
+        }
+    }
 ```
 
 以上程序接收所有数据，当恰好接收一帧图片并且可以写入当前缓冲区时，将这帧图片写入缓冲区，如果接收一帧图片后发现不能写入则丢弃该帧。
@@ -104,31 +160,31 @@ int start_application()
 注意在主循环中需要尽量减少操作，以保证足够的网速：
 
 ```C++
-	/* receive and process packets */
-	while (1) {
-		if (TcpFastTmrFlag) {
-			tcp_fasttmr();
-			TcpFastTmrFlag = 0;
-		}
-		if (TcpSlowTmrFlag) {
-			tcp_slowtmr();
-			TcpSlowTmrFlag = 0;
-		}
-		xemacif_input(echo_netif);
+    /* receive and process packets */
+    while (1) {
+        if (TcpFastTmrFlag) {
+            tcp_fasttmr();
+            TcpFastTmrFlag = 0;
+        }
+        if (TcpSlowTmrFlag) {
+            tcp_slowtmr();
+            TcpSlowTmrFlag = 0;
+        }
+        xemacif_input(echo_netif);
 
-		if (buffer_state[read_index] == STATE1) {
-			SOBEL_Setup();
-			show_img(522,0,DISPLAY_MM2S,(void*)SOBEL_MM2S,512,512,1);
-			buffer_state[read_index] = STATE0;
+        if (buffer_state[read_index] == STATE1) {
+            SOBEL_Setup();
+            show_img(522,0,DISPLAY_MM2S,(void*)SOBEL_MM2S,512,512,1);
+            buffer_state[read_index] = STATE0;
 //			xil_printf("read index: %d\n", read_index);
-			read_index = (read_index + 1) % 3;
-		}
+            read_index = (read_index + 1) % 3;
+        }
 
-		if (XHls_sobel_IsDone(&sobel)) {
-			show_img(0,0,DISPLAY_MM2S,(void*)SOBEL_S2MM,512,512,0);
+        if (XHls_sobel_IsDone(&sobel)) {
+            show_img(0,0,DISPLAY_MM2S,(void*)SOBEL_S2MM,512,512,0);
 //			xil_printf("sobel done.\n");
-		}
-	}
+        }
+    }
 ```
 
 ## TCP Client

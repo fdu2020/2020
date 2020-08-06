@@ -48,6 +48,39 @@ PL部分通过AXI Stream协议向FIFO循环发送数据。
 
 ![20200805160114](https://raw.githubusercontent.com/wxiang357/Image/master/20200805160114.png)
 
+使用Raw API时一般有类似下方的代码结构：
+
+```C++
+int main() 
+{
+    struct netif *netif, server_netif; 
+    ip_addr_t ipaddr, netmask, gw;
+    //板子的MAC地址
+    unsigned char mac_ethernet_address[] = 
+        {0x00, 0x0a, 0x35, 0x00, 0x01, 0x02};
+    
+    lwip_init();
+    
+    //把网络接口添加到netif_list, 并设为默认
+    if (!xemac_add(netif, &ipaddr, &netmask, 
+        &gw, mac_ethernet_address, EMAC_BASEADDR)) {
+        printf(“Error adding N/W interface\n\r”); 
+        return -1;
+    }
+    netif_set_default(netif);
+
+    platform_enable_interrupts();   //使能中断
+    netif_set_up(netif);  //指定网络是否打开
+    start_application();  //启动应用程序，设置回调
+    
+    
+    while (1) {
+        xemacif_input(netif); // 接收数据包
+        transfer_data();  //执行应用程序的特定功能
+    }
+}
+```
+
 ## SDK程序分析
 
 `init_intr_sys`主要进行定时器和DMA的中断设置，其中定时器设置每250ms触发一次中断，用于超时重传。DMA的中断回调函数中将`packet_trans_done`置1，表示PL产生的数据已经写到DDR的缓冲区，在主循环中检测到`packet_trans_done`为1则开始TCP发送。
@@ -55,14 +88,13 @@ PL部分通过AXI Stream协议向FIFO循环发送数据。
 ```C++
 int init_intr_sys(void)
 {
-	DMA_Intr_Init(&AxiDma,0);
-	Timer_init(&Timer,TIMER_LOAD_VALUE,0);
-	Init_Intr_System(&Intc);
-	Setup_Intr_Exception(&Intc);
-	DMA_Setup_Intr_System(&Intc,&AxiDma,0,RX_INTR_ID);
-	Timer_Setup_Intr_System(&Intc,&Timer,TIMER_IRPT_INTR);
-	DMA_Intr_Enable(&Intc,&AxiDma);
-
+    DMA_Intr_Init(&AxiDma,0);
+    Timer_init(&Timer,TIMER_LOAD_VALUE,0);
+    Init_Intr_System(&Intc);
+    Setup_Intr_Exception(&Intc);
+    DMA_Setup_Intr_System(&Intc,&AxiDma,0,RX_INTR_ID);
+    Timer_Setup_Intr_System(&Intc,&Timer,TIMER_IRPT_INTR);
+    DMA_Intr_Enable(&Intc,&AxiDma);
 }
 ```
 
@@ -73,35 +105,35 @@ int init_intr_sys(void)
 ```C++
 int tcp_send_init()
 {
-	struct tcp_pcb *pcb;
-	ip_addr_t ipaddr;
-	err_t err;
-	u16_t port;
+    struct tcp_pcb *pcb;
+    ip_addr_t ipaddr;
+    err_t err;
+    u16_t port;
 
-	/* create new TCP PCB structure */
-	pcb = tcp_new();
-	if (!pcb) {
-		xil_printf("txperf: Error creating PCB. Out of Memory\r\n");
-		return -1;
-	}
+    /* create new TCP PCB structure */
+    pcb = tcp_new();
+    if (!pcb) {
+        xil_printf("txperf: Error creating PCB. Out of Memory\r\n");
+        return -1;
+    }
 
-	/* connect to iperf tcp server */
-	IP4_ADDR(&ipaddr,  192, 168,   1, 209);		/* iperf server address */
+    /* connect to iperf tcp server */
+    IP4_ADDR(&ipaddr,  192, 168,   1, 209);		/* iperf server address */
 
-	port = 7;					/* iperf default port */
+    port = 7;					/* iperf default port */
 
     tcp_client_connected = 0;
     first_trans_start = 0;
     packet_trans_done = 0;
     packet_index = 0;
 
-	err = tcp_connect(pcb, &ipaddr, port, tcp_connected_callback);
-	if (err != ERR_OK) {
-		xil_printf("txperf: tcp_connect returned error: %d\r\n", err);
-		return err;
-	}
+    err = tcp_connect(pcb, &ipaddr, port, tcp_connected_callback);
+    if (err != ERR_OK) {
+        xil_printf("txperf: tcp_connect returned error: %d\r\n", err);
+        return err;
+    }
 
-	return 0;
+    return 0;
 }
 ```
 
@@ -114,3 +146,9 @@ tcp_sent(tpcb, tcp_sent_callback);
 `tcp_sent_callback`中将传输次数加1。
 
 最后在主循环的`send_received_data`函数中将乒乓缓存中的数据发送到上位机，并设置下一次DMA传输的地址。在乒乓操作中，两个缓冲区交替进行数据接收。
+
+## 测试结果
+
+上板运行后通过网络调试助手观察数据接收情况，同时可以查看网络流量。
+
+![eth](https://raw.githubusercontent.com/wxiang357/Image/master/eth.PNG)
